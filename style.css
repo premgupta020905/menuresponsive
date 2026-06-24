@@ -45,10 +45,6 @@ nav{
     display:none;
 }
 
-.sidebar{
-    display:none;
-}
-
 /* Hero */
 
 .hero{
@@ -142,7 +138,7 @@ nav{
 /* Mobile View */
 
 @media (max-width:480px){
-
+    
     nav{
         padding:15px;
     }
@@ -151,18 +147,16 @@ nav{
         display:none;
     }
 
+    .user{
+    display:none;
+    }
+
     .logo img{
         width:40px;
     }
 
-    .user{
-        font-size:12px;
-        padding:8px 12px;
-    }
-
     .menu-btn{
     border:none;
-    outline:none;
     background:none;
     cursor:pointer;
     font-size:24px;
@@ -173,25 +167,23 @@ nav{
     position:relative;
     }
 
-    .menu-btn:focus{
-    outline:none;
+    .sidebar{
+    position:fixed;
+    top:0;
+    right:-220px;
+    width:220px;
+    height:100vh;
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
+    background:black;
+    gap:15px;
+    transition:right 0.4s ease;
     }
 
     .menu-btn:focus + .sidebar{
-    display:flex;
-    }
-
-    .sidebar{
-    display:none;
-    flex-direction:column;
-    position:absolute;
-    top:40px;
     right:0;
-    background:black;
-    padding:20px;
-    width:180px;
-    gap:15px;
-    border-radius:8px;
     }
 
     .sidebar a{
